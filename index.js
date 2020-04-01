@@ -9,16 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const currentTime = new Date()
   let yearOfTheEvent = currentTime.getFullYear()
-  let eventDate = new Date( yearOfTheEvent, 03, 05 )
-  const isItFebruary4th = currentTime.getMonth() === 03 && currentTime.getDate() === 05
+  let eventDate = new Date( yearOfTheEvent, 01, 04 )
+  const isItFebruary4th = currentTime.getMonth() === 01 && currentTime.getDate() === 04
 
   function countdown() {
     const now = new Date()
     
     if (now > eventDate) {
-      eventDate = new Date( yearOfTheEvent + 1, 03, 05 )
+      eventDate = new Date( yearOfTheEvent + 1, 01, 04 )
     } else if ( now.getFullYear() === eventDate.getFullYear() + 1 ) {
-      eventDate = new Date( now.getFullYear(), 03, 05 )
+      eventDate = new Date( now.getFullYear(), 01, 04 )
     }
     
     const currentTime = now.getTime()
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     minutes %= 60
     seconds %= 60
 
-    if ( isItApril5th ) {
-      console.log('Happy birthday, Mr. Daniel!')
+    if ( isItFebruary4th ) {
+      console.log('Happy birthday, Nina!')
 
       countdownContainer.style.display = "none"
       birthdayTime.style.display = "block"
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       setTimeout(countdown, 1000)
 
-    } // end of if ( isItApril5th )
+    } // end of if ( isItFebruary4th )
 
   } // end of countdown
   countdown()
