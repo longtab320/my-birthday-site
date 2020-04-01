@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     seconds %= 60
 
     if ( isItFebruary4th ) {
-      console.log('Happy birthday, Nina!')
+      console.log('Happy birthday, Mr. Daniel!')
 
       countdownContainer.style.display = "none"
       birthdayTime.style.display = "block"
